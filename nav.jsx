@@ -5,7 +5,7 @@ function Nav({ active, onNavigate, onHomeClick }) {
     <nav className="nav" data-hover>
       <button className="nav__brand" data-hover onClick={onHomeClick} style={{ background:"none", border:0, padding:0 }}>
         <span className="nav__brand-mark" />
-        ABB<span style={{ opacity: 0.5 }}>.studio</span>
+        ABR<span style={{ opacity: 0.5 }}>.studio</span>
       </button>
       <div className="nav__items">
         {items.map((label) => (

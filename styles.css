@@ -1318,21 +1318,29 @@ body.custom-cursor-on * {
    Mobile redesign — proper phone layout
    ============================================ */
 @media (max-width: 720px) {
-  /* Nav: hide pill items + brand text — keep mark + CTA */
+  /* Nav: compact pill — brand mark + 3 items, CTA hidden (Contact link replaces it) */
   .nav {
-    top: 14px;
-    padding: 5px 5px 5px 14px;
-    gap: 8px;
+    top: 12px;
+    padding: 4px 4px 4px 12px;
+    gap: 2px;
+    max-width: calc(100vw - 24px);
   }
   .nav__brand {
-    font-size: 14px;
-    margin-right: 0;
+    font-size: 11px;
+    margin-right: 6px;
+    letter-spacing: 0.04em;
   }
-  .nav__brand-mark { width: 8px; height: 8px; }
+  .nav__brand-mark { width: 7px; height: 7px; }
+  .nav__items {
+    display: flex !important;
+    gap: 0;
+  }
+  .nav__item {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
   .nav__cta {
-    padding: 8px 14px;
-    font-size: 12px;
-    margin-left: 0;
+    display: none;
   }
 
   /* Hero becomes a vertical flow, not an absolute-positioned stack */

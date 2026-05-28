@@ -15,7 +15,7 @@ function About({ mounted }) {
       <div className="about__head">
         <div className="about__head-left">
           <div className={`reveal ${mounted ? "is-in" : ""} reveal--d1`} style={{ fontFamily:"'JetBrains Mono', monospace", fontSize:11, letterSpacing:"0.2em", textTransform:"uppercase", color:"rgba(255,255,255,0.55)", marginBottom: 18 }}>
-            ◆ ABB.Studio / About — Kisah Diri
+            ◆ ABR.Studio / About — Kisah Diri
           </div>
           <h1 className={`about__title reveal ${mounted ? "is-in" : ""} reveal--d2`}>
             Antara<br/>
@@ -36,7 +36,7 @@ function About({ mounted }) {
           <span className="term__dot" style={{ background:"#ff5f56" }}/>
           <span className="term__dot" style={{ background:"#ffbd2e" }}/>
           <span className="term__dot" style={{ background:"#27c93f" }}/>
-          <span className="term__title">~/abb.studio/about — narrative.log</span>
+          <span className="term__title">~/abr.studio/about — narrative.log</span>
         </div>
         <div className="term__body">
           <TerminalLine prompt="$">

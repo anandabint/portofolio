@@ -105,7 +105,7 @@ function Hero({ identities, onWorkClick, onNavigate }) {
       <div className="hero__meta">
         <div className="hero__meta-line">
           <span className="hero__meta-dot" />
-          <span>ABB.Studio / Portofolio</span>
+          <span>ABR.Studio / Portofolio</span>
         </div>
         <div>2026 ‧ Vol.07</div>
         <div style={{ marginTop: 8 }}>Ananda Bintang Ramadhan</div>
