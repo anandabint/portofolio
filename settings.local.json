@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir c:\\\\Users\\\\anand\\\\portfolio)",
+      "PowerShell(Get-ChildItem c:\\\\Users\\\\anand\\\\portfolio -ErrorAction SilentlyContinue; if \\(-not \\(Test-Path c:\\\\Users\\\\anand\\\\portfolio\\)\\) { New-Item -ItemType Directory -Path c:\\\\Users\\\\anand\\\\portfolio | Out-Null; Write-Output \"Created portfolio directory\" })"
+    ]
+  }
+}
