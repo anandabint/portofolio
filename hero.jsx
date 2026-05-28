@@ -127,7 +127,9 @@ function Hero({ identities, onWorkClick, onNavigate }) {
       {/* Big background type */}
       <div className="hero__bgtype" aria-hidden="true">
         <div className="hero__bgtype-text" key={id.key}>
-          {id.label}
+          {id.label.split(" ").map((part, i) => (
+            <span key={i} style={{ display: "block" }}>{part}</span>
+          ))}
         </div>
       </div>
 

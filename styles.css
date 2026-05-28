@@ -284,20 +284,28 @@ body.custom-cursor-on * {
   z-index: 2;
   pointer-events: none;
   overflow: hidden;
+  /* never bleed into the top-corner meta panels */
+  padding: 200px 280px;
 }
 
 .hero__bgtype-text {
   font-family: "Big Shoulders Display", sans-serif;
   font-weight: 900;
-  font-size: clamp(180px, 28vw, 460px);
-  line-height: 0.78;
+  font-size: clamp(56px, 8vw, 120px);
+  line-height: 0.88;
   letter-spacing: -0.04em;
   text-transform: uppercase;
+  text-align: center;
   white-space: nowrap;
   opacity: 0.96;
   transform-origin: center;
   text-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
   will-change: transform, opacity;
+  max-width: 100%;
+}
+
+.hero__bgtype-text span {
+  display: block;
 }
 
 /* Centerpiece — striped placeholder bowl */
@@ -1294,6 +1302,8 @@ body.custom-cursor-on * {
   .nav { gap: 0; padding-left: 14px; }
   .nav__items { display: none; }
   .hero__meta, .hero__meta-right { display: none; }
+  .hero__bgtype { padding: 80px 24px; }
+  .hero__bgtype-text { font-size: clamp(48px, 14vw, 92px); }
   .work { padding: 120px 18px 60px; }
   .work__card--lg, .work__card--md, .work__card--sm { grid-column: span 12; }
   .surf__hero { padding: 0 18px 40px; }
@@ -1302,4 +1312,233 @@ body.custom-cursor-on * {
   .lead__side { display: none; }
   .lead__kpi-row { grid-template-columns: repeat(2, 1fr); }
   .lead__row { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   Mobile redesign — proper phone layout
+   ============================================ */
+@media (max-width: 720px) {
+  /* Nav: hide pill items + brand text — keep mark + CTA */
+  .nav {
+    top: 14px;
+    padding: 5px 5px 5px 14px;
+    gap: 8px;
+  }
+  .nav__brand {
+    font-size: 14px;
+    margin-right: 0;
+  }
+  .nav__brand-mark { width: 8px; height: 8px; }
+  .nav__cta {
+    padding: 8px 14px;
+    font-size: 12px;
+    margin-left: 0;
+  }
+
+  /* Hero becomes a vertical flow, not an absolute-positioned stack */
+  .hero {
+    min-height: 100vh;
+    padding: 96px 20px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  /* Identity name, now inline at top of hero, multi-line, small enough to fit */
+  .hero__bgtype {
+    position: relative;
+    inset: auto;
+    padding: 0;
+    margin: 8px 0 0;
+    overflow: visible;
+    flex: 0 0 auto;
+  }
+  .hero__bgtype-text {
+    font-size: clamp(48px, 13vw, 80px);
+    line-height: 0.92;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  /* Centerpiece — small disc below identity label */
+  .hero__center {
+    position: relative;
+    inset: auto;
+    width: 64vw;
+    max-width: 280px;
+    aspect-ratio: 1 / 1;
+    margin: 22px auto 0;
+    flex: 0 0 auto;
+  }
+  .hero__center-stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    transform: none !important;
+    filter: drop-shadow(0 24px 40px rgba(0,0,0,0.45));
+  }
+  .hero__center-img { border-radius: 50%; }
+  .hero__center-label {
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    padding: 5px 9px;
+  }
+  .hero__center-shadow {
+    left: 18%; right: 18%;
+    bottom: -3%;
+    height: 6%;
+  }
+
+  /* Tagline */
+  .hero__tagline {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin: 22px auto 0;
+    padding: 0 8px;
+    max-width: 100%;
+  }
+  .hero__tagline-eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    margin-bottom: 10px;
+  }
+  .hero__tagline-h {
+    font-size: 19px;
+    line-height: 1.25;
+  }
+
+  /* Selector — horizontal-scrollable */
+  .hero__selector {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin: 20px -20px 0;
+    padding: 5px 12px;
+    width: calc(100% + 40px);
+    max-width: calc(100% + 40px);
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: flex-start;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .hero__selector::-webkit-scrollbar { display: none; }
+  .hero__selector-item {
+    padding: 10px 16px;
+    font-size: 12px;
+    flex: 0 0 auto;
+  }
+
+  /* Hide the marquee ticker on mobile — too noisy in tight space */
+  .hero__ticker { display: none; }
+
+  /* ===== Work ===== */
+  .work { padding: 100px 16px 60px; }
+  .work__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 32px;
+  }
+  .work__title { font-size: clamp(54px, 16vw, 88px); }
+  .work__meta { align-items: flex-start; }
+  .work__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .work__grid > * {
+    grid-column: 1 / -1 !important;
+  }
+  .work__card--lg, .work__card--md, .work__card--sm {
+    aspect-ratio: 4 / 5;
+  }
+  .work__card-name { font-size: clamp(32px, 9vw, 48px); }
+  .work__card-body { padding: 20px; }
+  .work__card-foot { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .work__card-desc { font-size: 12px; }
+
+  /* ===== About ===== */
+  .about { padding: 100px 18px 60px; }
+  .about__head { margin-bottom: 36px; }
+  .about__title { font-size: clamp(54px, 16vw, 88px); }
+  .about__pitch { font-size: 14px; }
+  .term { margin-bottom: 60px; }
+  .term__body { padding: 18px 16px 22px; font-size: 13px; }
+  .term__out { margin-left: 14px; font-size: 13px; }
+  .about__specs, .about__exp { margin-bottom: 60px; }
+  .about__specs-title { font-size: clamp(40px, 11vw, 64px); }
+  .specs__card { padding: 22px; }
+  .specs__card-h { font-size: 26px; }
+  .specs__seal { width: 120px; height: 120px; bottom: -20px; right: -20px; }
+  .tl__role { font-size: 22px; }
+  .tl__year { font-size: 10px; padding-top: 0; }
+  .tl__row { padding: 22px 0; }
+
+  /* ===== Contact ===== */
+  .contact { padding: 100px 18px 60px; align-items: flex-start; }
+  .contact__title { font-size: clamp(72px, 22vw, 132px); }
+  .contact__sub { font-size: 14px; margin-bottom: 36px; }
+  .conn__row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 22px 4px;
+  }
+  .conn__row:hover { padding-left: 4px; padding-right: 4px; }
+  .conn__proto { display: none; }
+  .conn__hint { display: none; }
+  .conn__value { font-size: clamp(22px, 6.5vw, 32px); }
+  .conn__copy { justify-self: start; }
+  .conn__arrow {
+    position: absolute;
+    top: 22px;
+    right: 4px;
+    width: 44px;
+    height: 44px;
+  }
+  .conn__row { position: relative; }
+  .contact__meta { grid-template-columns: 1fr 1fr; gap: 18px; padding-top: 28px; }
+
+  /* ===== Adaptify ===== */
+  .adapt__hero { padding: 100px 18px 30px; min-height: auto; gap: 22px; }
+  .adapt__hero-content { flex-direction: column; align-items: flex-start; gap: 18px; margin-bottom: 0; }
+  .adapt__hero-tag { text-align: left; max-width: 100%; }
+  .adapt__display { font-size: clamp(48px, 14vw, 78px); max-width: none; }
+  .adapt__widget { padding: 16px 18px; }
+  .adapt__widget-row { grid-template-columns: 1fr; gap: 14px; }
+  .adapt__widget-num { font-size: 64px; }
+  .adapt__how { padding: 50px 18px; }
+  .adapt__how-h { font-size: clamp(36px, 10vw, 56px); }
+  .adapt__how-grid { grid-template-columns: 1fr; gap: 14px; }
+  .adapt__step { padding: 22px; }
+  .adapt__stats { grid-template-columns: 1fr 1fr; gap: 18px; padding: 0 18px 50px; }
+  .adapt__stat-num { font-size: clamp(40px, 11vw, 60px); }
+
+  /* ===== Tidar ===== */
+  .tidar__shell { grid-template-columns: 1fr; }
+  .tidar__side { display: none; }
+  .tidar__main { padding: 80px 16px 40px; }
+  .tidar__topbar { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .tidar__topbar-h { font-size: 28px; }
+  .tidar__kpi-row { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .tidar__kpi-val { font-size: 28px; }
+  .tidar__row { grid-template-columns: 1fr; }
+  .tidar__card { padding: 18px; }
+  .tidar__legend { flex-wrap: wrap; gap: 8px; }
+  .tidar__table { font-size: 12px; }
+  .tidar__table th, .tidar__table td { padding: 10px 6px; }
+
+  /* Custom cursor off on mobile (no mouse anyway) */
+  .cc-dot, .cc-ring { display: none; }
+  body.custom-cursor-on, body.custom-cursor-on * { cursor: auto !important; }
 }
