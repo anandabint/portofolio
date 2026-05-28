@@ -165,7 +165,7 @@ function Work({ onOpenCase, mounted }) {
       <div className="work__head">
         <div>
           <div className={`reveal ${mounted ? "is-in" : ""} reveal--d1`} style={{ fontFamily:"'JetBrains Mono', monospace", fontSize:11, letterSpacing:"0.18em", textTransform:"uppercase", color:"rgba(255,255,255,0.55)", marginBottom: 18 }}>
-            ◆ Project Showcase Log / 2010 — 2026
+            ◆ Project Showcase Log / 2010 - 2026
           </div>
           <h1 className={`work__title reveal ${mounted ? "is-in" : ""} reveal--d2`}>
             Lima<br/>karya,<br/><em style={{ fontStyle:"italic", fontWeight: 300, opacity: 0.7 }}>satu lintasan.</em>

@@ -97,7 +97,7 @@ function App() {
           onChange={(v) => setTweak("themeSet", v)}
         />
         <div style={{ padding:"4px 8px 8px", fontSize:11, color:"rgba(255,255,255,0.55)", lineHeight:1.5 }}>
-          <strong>Identities</strong> menampilkan 5 sisi diri Anda — Tinkerer, Problem Solver, Field Leader,
+          <strong>Identities</strong> menampilkan 5 sisi diri Anda Tinkerer, Problem Solver, Field Leader,
           Tech Explorer, HSE Practitioner. <strong>Fruits</strong> mengembalikan tema buah berry sebagai
           referensi konsep awal.
         </div>

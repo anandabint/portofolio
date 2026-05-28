@@ -44,7 +44,7 @@ function About({ mounted }) {
           </TerminalLine>
           <div className="term__out">
             Saya mulai oprek sejak SD, tahun 2010. Hape pertama yang saya bedah adalah
-            <strong> Samsung Galaxy Young (GT-S5360)</strong> — flashing custom ROM,
+            <strong> Samsung Galaxy Young (GT-S5360)</strong> flashing custom ROM,
             mengganti recovery, melihat sistem yang seharusnya disegel terbuka di
             depan saya. Rasa penasaran itu tidak pernah berhenti.
           </div>
@@ -64,7 +64,7 @@ function About({ mounted }) {
           </TerminalLine>
           <div className="term__out">
             Disiplin itu terbawa ke <strong>PT. Multiuser Global Network</strong>.
-            Di lapangan, saya tidak hanya mengawasi kabel — saya memimpin rapat tim
+            Di lapangan, saya tidak hanya mengawasi kabel saya memimpin rapat tim
             dan manajemen senior, mendokumentasikan setiap titik, dan ketika
             menemukan praktik koruptif, saya pilih jalan yang lebih sulit:
             <em> jujur, terbuka, dan terdokumentasi.</em>
@@ -76,7 +76,7 @@ function About({ mounted }) {
           <div className="term__out">
             Sekarang saya menutup D3 Teknik Elektro di <strong>Politeknik Negeri Malang</strong>
             sambil membangun fondasi sebagai praktisi <strong>HSE</strong>. Telekomunikasi
-            tetap akar saya — tapi keselamatan kerja adalah arah saya berikutnya.
+            tetap akar saya tapi keselamatan kerja adalah arah saya berikutnya.
           </div>
 
           <TerminalLine prompt="$" delay={480}>
@@ -91,7 +91,7 @@ function About({ mounted }) {
       {/* Specs grid */}
       <div className="about__specs">
         <div className="about__specs-head">
-          <div className="about__specs-eyebrow">◆ 02 — Professional Specs & Stats</div>
+          <div className="about__specs-eyebrow">◆ 02 Professional Specs & Stats</div>
           <h2 className="about__specs-title">Pendidikan & <em>Sertifikasi</em></h2>
         </div>
         <div className="specs">
@@ -142,7 +142,7 @@ function About({ mounted }) {
       {/* Experience timeline */}
       <div className="about__exp">
         <div className="about__specs-head">
-          <div className="about__specs-eyebrow">◆ 03 — Interactive Experience Timeline</div>
+          <div className="about__specs-eyebrow">◆ 03 Interactive Experience Timeline</div>
           <h2 className="about__specs-title">Lintasan <em>perjalanan</em></h2>
         </div>
         <div className="timeline">
@@ -173,7 +173,7 @@ function About({ mounted }) {
               role: "Atlet Basket Kompetitif",
               org: "Tim sekolah & kompetisi regional",
               points: [
-                "Menjalani regimen latihan harian — membentuk disiplin dan ketahanan mental.",
+                "Menjalani regimen latihan harian membentuk disiplin dan ketahanan mental.",
                 "Mengambil peran kepemimpinan di lapangan: membaca permainan, mengatur tempo, eksekusi clutch.",
                 "Mengalihkan mental kompetitif itu ke dunia kerja: deadline, supervisi, problem-solving cepat."
               ]

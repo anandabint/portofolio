@@ -32,7 +32,7 @@ function Contact({ mounted }) {
       label: "Instagram — sisi personal",
       value: "instagram.com/anandabint",
       href: "https://instagram.com/anandabint",
-      hint: "Sisi yang lebih santai — di luar jam kerja."
+      hint: "Sisi yang lebih santai di luar jam kerja."
     }
   ];
 
@@ -49,7 +49,7 @@ function Contact({ mounted }) {
         </h1>
 
         <p className={`contact__sub reveal ${mounted ? "is-in" : ""} reveal--d3`}>
-          Tiga kanal aktif. Pilih yang paling nyaman — saya membalas dalam 24 jam pada hari kerja.
+          Tiga kanal aktif. Pilih yang paling nyaman saya membalas dalam 24 jam pada hari kerja.
         </p>
 
         <div className="conn">
@@ -87,7 +87,7 @@ function Contact({ mounted }) {
         <div className={`contact__meta reveal ${mounted ? "is-in" : ""} reveal--d6`}>
           <div>
             <div className="contact__meta-label">◇ Lokasi</div>
-            <div className="contact__meta-val">Blitar / Malang — ID</div>
+            <div className="contact__meta-val">Blitar / Malang. ID</div>
           </div>
           <div>
             <div className="contact__meta-label">◇ Zona Waktu</div>

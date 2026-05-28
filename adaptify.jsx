@@ -90,7 +90,7 @@ function Adaptify({ onBack }) {
             <div>◇ Real-time biometrics → adaptive playback</div>
             <div style={{ marginTop: 14, opacity:0.6 }}>
               Smartwatch membaca heart rate &amp; step count secara live, lalu kurva tempo musik
-              menyesuaikan zona fisiologis pengguna — tanpa input manual.
+              menyesuaikan zona fisiologis pengguna tanpa input manual.
             </div>
           </div>
         </div>
@@ -122,7 +122,7 @@ function Adaptify({ onBack }) {
       {/* How it works grid */}
       <div className="adapt__how">
         <div className="adapt__how-head">
-          <div className="adapt__how-eyebrow">◇ 01 — Bagaimana cara kerjanya</div>
+          <div className="adapt__how-eyebrow">◇ 01 Bagaimana cara kerjanya</div>
           <h2 className="adapt__how-h">Tiga lapisan, <em>satu denyut.</em></h2>
         </div>
         <div className="adapt__how-grid">

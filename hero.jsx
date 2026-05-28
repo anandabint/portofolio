@@ -110,7 +110,7 @@ function Hero({ identities, onWorkClick, onNavigate }) {
         <div>2026 ‧ Vol.07</div>
         <div style={{ marginTop: 8 }}>Ananda Bintang Ramadhan</div>
         <div style={{ opacity: 0.6 }}>Tinkerer ‧ Problem Solver ‧ Future HSE</div>
-        <div style={{ opacity: 0.45, marginTop: 4 }}>Blitar / Malang — ID</div>
+        <div style={{ opacity: 0.45, marginTop: 4 }}>Blitar / Malang. ID</div>
       </div>
 
       <div className="hero__meta-right">
@@ -142,7 +142,7 @@ function Hero({ identities, onWorkClick, onNavigate }) {
               className={`hero__center-img ${i === idx ? "is-active" : ""}`}
               style={{ "--center-tint": b.tint }}
             >
-              <div className="hero__center-label">{b.centerLabel} — placeholder</div>
+              <div className="hero__center-label">{b.centerLabel} placeholder</div>
               <div className="hero__center-shine" />
             </div>
           ))}
@@ -181,7 +181,7 @@ function Hero({ identities, onWorkClick, onNavigate }) {
             <span key={k} style={{ display: "inline-flex", gap: 48 }}>
               <span>D3 TEKNIK ELEKTRO ‧ POLINEMA</span><span>◆</span>
               <span>K3 MANAJEMEN RISIKO ‧ PS.C-25.04.17.0066</span><span>◆</span>
-              <span>OPREK SEJAK 2010 — GT-S5360</span><span>◆</span>
+              <span>OPREK SEJAK 2010 GT-S5360</span><span>◆</span>
               <span>PT. MGN ‧ SUPERVISI FO BAWAH TANAH</span><span>◆</span>
               <span>SELECTED WORK ‧ <button data-hover onClick={onWorkClick} style={{textDecoration:"underline",cursor:"none",background:"none",border:0,color:"inherit",font:"inherit",letterSpacing:"inherit"}}>BUKA GRID</button></span><span>◆</span>
             </span>

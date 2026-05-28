@@ -110,7 +110,7 @@ function Tidar({ onBack }) {
         <main className="tidar__main">
           <div className="tidar__topbar">
             <div>
-              <h1 className="tidar__topbar-h">Citraland Tidar — Run A-7</h1>
+              <h1 className="tidar__topbar-h">Citraland Tidar Run A-7</h1>
               <div className="tidar__topbar-sub">FO bawah tanah ‧ Penggelaran &amp; supervisi ‧ Jul → Nov 2025</div>
             </div>
             <button className="tidar__btn-primary" data-hover>
@@ -161,7 +161,7 @@ function Tidar({ onBack }) {
               </div>
               {hover !== null && (
                 <div style={{ marginTop:10, fontSize:12, color:"#cfe0d8", fontFamily:"'JetBrains Mono', monospace" }}>
-                  ◇ Segmen S-0{hover + 1} dipilih — klik untuk membuka berita acara
+                  ◇ Segmen S-0{hover + 1} dipilih klik untuk membuka berita acara
                 </div>
               )}
             </div>
